@@ -1,0 +1,28 @@
+{% extends "diff_header.html" %}
+
+
+{% block body %}
+    <form action="/add_product" method="post">
+        <div>
+            <label>Nombre del producto</label>
+            <input type="text" placeholder="Nombre del producto" name="nombre">
+        </div>
+        <div>
+            <label>URL de la foto del producto</label>
+            <input type="text" placeholder="URL de la foto del producto" name="foto">
+        </div>
+        <div>
+            <label>Cantidad de stock de este producto</label>
+            <input type="text" placeholder="cantidad del producto" name="cantidad">
+        </div>
+        <div>
+            <label>Precio del producto</label>
+            <input type="text" placeholder="precio" name="precio">
+        </div>
+        <div>
+            <label>Descripccion del producto</label>
+            <textarea name="descripcion" id=""></textarea>
+        </div>
+        <button type="submit">Añadir</button>
+    </form>
+{% endblock %}
