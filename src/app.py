@@ -59,15 +59,15 @@ def login():
                     return redirect(url_for('admin'))
                     
                 print('Sesion iniciada')
-                ##return redirect(url_for('home'))
+                return redirect(url_for('pretienda'))
             else:
                 print('Contraseña incorrecta')
                 return redirect(url_for('register'))
         else:
             print("Usuario no encontrado")
     else:
-        # if current_user.is_authenticated:
-        #     return redirect(url_for('home'))
+        if current_user.is_authenticated:
+            return redirect(url_for('pretienda'))
         return render_template('login.html')
     
 @app.route('/logout')
@@ -150,7 +150,7 @@ def tienda():
 
 @app.route('/usuarios')
 def usuarios():
-    return usuarios
+    return "<h1> Usuarios </h1>"
 
 
 
